@@ -1,0 +1,184 @@
+@keyframes ray {
+    0% {
+      border-color: transparent;
+      transform: translateX(-200%);
+    }
+    100% {
+      border-color: #e7472e;
+      transform: translateX(100%);
+    }
+  }
+  .ray-animation{
+    animation: ray 1s infinite alternate;
+  }
+
+  
+  @keyframes anim2{
+    0% {
+        right: -17%;
+    }
+    20% {
+        bottom: 60%;
+        right: -13%;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+    30% {
+        bottom: 55%;
+        right: -5%;
+    }
+    40% {
+        bottom: 15%;
+        right: 10%;
+    }
+    50% {
+        bottom: 70%;
+        right: 25%;
+    }
+    60% {
+        bottom: 100%;
+        right: 10%;
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+    70% {
+        bottom: 70%;
+        right: 20%;
+    }
+    80% {
+        bottom: 40%;
+        right: -20%;
+    }
+    90% {
+        bottom: 50%;
+        right: 10%;
+    }
+    100% {
+        
+        right: -17%;
+    }
+  }
+  @keyframes anim1{
+    0% {
+        left: -17%;
+        top: -30%;
+    }
+    20% {
+        left: -13%;
+        top: 20%;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    30% {
+        left: -5%;
+        top: 25%;
+    }
+    40% {
+        left: 10%;
+        top: 5%;
+    }
+    50% {
+        left: 25%;
+        top: 10%;
+    }
+    60% {
+        left: 10%;
+        top: 100%;
+        -webkit-transform: rotate(-180deg);
+        transform: rotate(-180deg);
+    }
+    70% {
+        left: 20%;
+        top: 70%;
+    }
+    80% {
+        left: -20%;
+        top: 30%;
+    }
+    90% {
+        left: 10%;
+        top: 10%;
+    }
+    100% {
+        left: -17%;
+        top: -30%;
+    }
+  }
+  @keyframes neon {
+    0% {
+        opacity: 0;
+        text-shadow: none;
+    }
+    5% {
+        opacity: 1;
+        text-shadow: 0 0 25px #ff3300;
+    }
+    10% {
+        opacity: .2;
+        text-shadow: none;
+    }
+    15% {
+        opacity: 1;
+        text-shadow: 0 0 25px #ff3300;
+    }
+    100% {
+        opacity: 1;
+        text-shadow: 0 0 25px #ff3300;
+    }
+  }
+  @keyframes flicker {
+    0%, 19%, 21%, 23%, 25%, 47%, 49%, 51%, 53%, 55%, 85%, 87%, 89%, 91%, 93%, 100% {
+        opacity: 0.3;
+    }
+    20%, 22%, 24%, 48%, 50%, 52%, 54%, 56%, 86%, 88%, 90%, 92% {
+        opacity: 1; /* Можете изменить значение прозрачности по вашему усмотрению */
+    }
+}
+
+  .neon{
+    animation: neon 8s ease-in-out infinite;
+  }
+  .neon-flick{
+    animation: flicker 8s infinite alternate; /* Применение анимации */
+    text-shadow: 0 0 35px #f63505;
+  }
+
+
+  .menu:before {
+    -webkit-animation: anim2 25s linear infinite;
+    animation: anim2 25s linear infinite;
+    background: #1c50fb; 
+    bottom: 0;
+    content: "";
+    -webkit-filter: blur(152px);
+    filter: blur(152px);
+    height: 148px;
+    position: absolute;
+    right: -19%;
+    width: 269px;
+    z-index: -1;
+  }
+  .menu:after {
+    -webkit-animation: anim1 25s linear infinite;
+    animation: anim1 25s linear infinite;
+    background: #c14b0b;
+    content: "";
+    -webkit-filter: blur(152px);
+    filter: blur(152px);
+    height: 250px;
+    left: -19%;
+    position: absolute;
+    top: -32%;
+    width: 315px;
+    z-index: -1;
+}
+  .animate-ray {
+    animation: ray 4s linear infinite;
+  }
+
+  .nav-border{
+    border: 2px solid #e7472e;
+  }
+  .bg-burger{
+    background: linear-gradient(180deg,#0d1116,#131727);
+  }
